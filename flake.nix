@@ -10,17 +10,22 @@
     nixpkgs,
   }: let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; config = { allowUnfree = true; };};
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {allowUnfree = true;};
+    };
   in {
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
         jdk17
         gradle_8
-				google-chrome
+        chromium
+        chromedriver
       ];
       shellHook = ''
         export SHELL="/run/current-system/sw/bin/bash"
       '';
+        # export PATH=$PATH:${pkgs.chromedriver}/bin
     };
   };
 }
