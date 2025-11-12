@@ -2,6 +2,8 @@ package co.edu.udea.calidad.petStore.stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 
+import co.edu.udea.calidad.petStore.tasks.OpenThe;
+import co.edu.udea.calidad.petStore.userinterfaces.GooglePage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -27,8 +29,7 @@ public class FindOutStepDefinition {
 
 	@Given("I am in the google page")
 	public void iAmInTheGooglePage() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		student.attemptsTo(OpenThe.navigator(new GooglePage()));
 	}
 
 	@When("I type u de a on google chrome")
