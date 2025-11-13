@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Find out the U de A official site using the browser google chrome" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-12T04:23:17.778Z" hostname="void-ideapad" time="16.561">
+<testsuite name="Find out the U de A official site using the browser google chrome" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-13T16:47:28.826Z" hostname="nixos" time="27.104">
   <properties/>
-  <testcase name="Search the U de A official page using google chrome." classname="Find out the U de A official site using the browser google chrome" time="16.561">
-    <failure message="io.cucumber.java.PendingException: TODO: implement me" type="io.cucumber.java.PendingException">io.cucumber.java.PendingException: TODO: implement me
-	at app//co.edu.udea.calidad.petStore.stepdefinitions.FindOutStepDefinition.iTypeUDeAOnGoogleChrome(FindOutStepDefinition.java:38)
-	at ✽.I type u de a on google chrome(file:///home/docair/Documents/calidad/casos_automatizados/Practica-casos-prueba-automatizados/src/test/resources/features/find_out_udea_official_site.feature:9)
+  <testcase name="Search the U de A official page using google chrome." classname="Find out the U de A official site using the browser google chrome" time="27.104">
+    <failure message="java.lang.AssertionError: &#10;Expected: a string containing &quot;unal&quot;&#10;     but: was &quot;Estudiante&#10;Profesor&#10;Empleado&#10;Egresado&#10;Jubilado&#10;play_circle_outline&#10;EN VIVO&#10;sort Enlaces de interés&#10;person_outline&#10;INGRESAR&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: a string containing &quot;unal&quot;
+     but: was &quot;Estudiante
+Profesor
+Empleado
+Egresado
+Jubilado
+play_circle_outline
+EN VIVO
+sort Enlaces de interés
+person_outline
+INGRESAR&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.edu.udea.calidad.petStore.stepdefinitions.FindOutStepDefinition.iCanSeeTheUdeaSOfficialPage(FindOutStepDefinition.java:46)
+	at ✽.I can see the udea's official page(file:///home/docair/Documents/calidad/ejemplo_automatizacion/src/test/resources/features/find_out_udea_official_site.feature:10)
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
@@ -18,17 +32,19 @@ Search the U de A official page using google chrome.(find-out-the-u-de-a-officia
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-Nov 11, 2025 11:23:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Nov 13, 2025 11:47:31 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-Nov 11, 2025 11:23:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Nov 13, 2025 11:47:31 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.134. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-[Test worker] INFO  - ?[96m
-  _____   ___   ___   _____     ___   ___   _  _   ___    ___   _  _    ___ 
- |_   _| | __| / __| |_   _|   | _ \ | __| | \| | |   \  |_ _| | \| |  / __|
-   | |   | _|  \__ \   | |     |  _/ | _|  | .` | | |) |  | |  | .` | | (_ |
-   |_|   |___| |___/   |_|     |_|   |___| |_|\_| |___/  |___| |_|\_|  \___|
+[Test worker] ERROR  - ?[91m
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
 
 Search the U de A official page using google chrome.
------------------------------------------------------------------------------?[0m
+-----------------------------------------------------------------------?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Then validation should be a string containing 'unal'?[0m
+[Test worker] ERROR  - ?[91m    Expected: a string containing "unal" but: was "EstudianteProfesorEmpleadoEgresadoJubiladoplay_circle_outlineEN VIVOsort Enlaces de interésperson_outlineINGRESAR"?[0m
 ]]></system-err>
 </testsuite>

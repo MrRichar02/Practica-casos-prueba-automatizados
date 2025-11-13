@@ -1,7 +1,10 @@
 package co.edu.udea.calidad.petStore.stepdefinitions;
 
+import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
+import co.edu.udea.calidad.petStore.questions.Validation;
+import co.edu.udea.calidad.petStore.tasks.FindThe;
 import co.edu.udea.calidad.petStore.tasks.OpenThe;
 import co.edu.udea.calidad.petStore.userinterfaces.GooglePage;
 import io.cucumber.java.Before;
@@ -10,6 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -34,14 +38,12 @@ public class FindOutStepDefinition {
 
 	@When("I type u de a on google chrome")
 	public void iTypeUDeAOnGoogleChrome() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		student.attemptsTo(FindThe.keyword());
 	}
 
 	@Then("I can see the udea's official page")
 	public void iCanSeeTheUdeaSOfficialPage() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		GivenWhenThen.then(student).should(GivenWhenThen.seeThat(Validation.theUdeaSite(), Matchers.containsString("Estudiante")));
 	}
 
 }
